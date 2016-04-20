@@ -18,7 +18,7 @@ public class SnakeSwipe : MonoBehaviour, ISnakeController
 
     void Update()
     {
-
+        Swipe();
     }
 
     public void SetDirection(int i)
@@ -66,12 +66,12 @@ public class SnakeSwipe : MonoBehaviour, ISnakeController
                     _direction = 8;
                 }
                 //Swipe Left
-                else if (swipeDirection.x > 0 && swipeDirection.y > -0.5f && swipeDirection.y < 0.5f)
+                else if (swipeDirection.x < 0 && swipeDirection.y > -0.5f && swipeDirection.y < 0.5f)
                 {
                     _direction = 4;
                 }
                 //Swipe Right
-                else if (swipeDirection.x < 0 && swipeDirection.y > -0.5f && swipeDirection.y < 0.5f)
+                else if (swipeDirection.x > 0 && swipeDirection.y > -0.5f && swipeDirection.y < 0.5f)
                 {
                     _direction = 6;
                 }

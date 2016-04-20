@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _direction: 0
-  minSwipeLength: 0
+  minSwipeLength: 10
 --- !u!1 &215360186
 GameObject:
   m_ObjectHideFlags: 0
