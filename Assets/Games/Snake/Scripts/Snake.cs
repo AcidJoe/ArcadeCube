@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class Snake : MonoBehaviour
 {
+    public ISnakeController controller;
+
     public GameObject snakeBit;
 
     public enum State { left, right, up, down}
@@ -30,11 +32,39 @@ public class Snake : MonoBehaviour
         setState(State.up);
         Invoke("MoveSnake", spawnTime);
 	}
-	
-	void Update ()
+
+    void Update()
     {
-	
-	}
+        if (controller.GetDirection() != 0 && !isChoosen)
+        {
+            if (currentState == State.up || currentState == State.down)
+            {
+                if (controller.GetDirection() == 4)
+                {
+                    setState(State.left);
+                    isChoosen = true;
+                }
+                else if (controller.GetDirection() == 6)
+                {
+                    setState(State.right);
+                    isChoosen = true;
+                }
+            }
+            else if (currentState == State.left || currentState == State.right)
+            {
+                if (controller.GetDirection() == 2)
+                {
+                    setState(State.up);
+                    isChoosen = true;
+                }
+                else if (controller.GetDirection() == 8)
+                {
+                    setState(State.down);
+                    isChoosen = true;
+                }
+            }
+        }
+    }
 
     void MoveSnake()
     {

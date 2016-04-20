@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 167990447}
   - 114: {fileID: 167990448}
+  - 114: {fileID: 167990449}
   m_Layer: 0
   m_Name: ControlManager
   m_TagString: Untagged
@@ -124,6 +125,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100935b40d0392142be018751a2d6393, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snake: {fileID: 1659281303}
+--- !u!114 &167990449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 167990446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c462125d3786e804b9167184054c30e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _direction: 0
+  minSwipeLength: 0
 --- !u!1 &215360186
 GameObject:
   m_ObjectHideFlags: 0
