@@ -26,7 +26,7 @@ public class Snake : MonoBehaviour
 
     void Start ()
     {
-        spawnTime = 0.2f;
+        spawnTime = 0.6f;
         bits = new Queue<GameObject>();
         lenght = 3;
         setState(State.up);

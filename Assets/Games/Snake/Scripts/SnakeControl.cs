@@ -8,7 +8,7 @@ public class SnakeControl : MonoBehaviour
 
 	void Start ()
     {
-        sConroller = GetComponent<SnakeSwipe>();
+        sConroller = GetComponent<SnakeFourButton>();
 
         snake.controller = sConroller;
 	}
