@@ -31,27 +31,27 @@ public class SnakeAccel : MonoBehaviour, ISnakeController
     {
         accel = Input.acceleration;
 
-        if (Mathf.Abs(accel.y) > Mathf.Abs(accel.z) && accel.y > 0.2f)
+        if (Mathf.Abs(accel.y) > Mathf.Abs(accel.z) && accel.y > 0f)
         {
             SetDirection(2);
         }
 
-        else if (Mathf.Abs(accel.y) > Mathf.Abs(accel.z) && accel.y < -0.2f)
+        else if (Mathf.Abs(accel.y) > Mathf.Abs(accel.z) && accel.y < 0f)
         {
             SetDirection(8);
         }
 
-        else if (Mathf.Abs(accel.y) < Mathf.Abs(accel.z) && accel.y > 0.2f)
+        else if (Mathf.Abs(accel.y) < Mathf.Abs(accel.z) && accel.y > 0f)
         {
             SetDirection(6);
         }
 
-        else if (Mathf.Abs(accel.y) < Mathf.Abs(accel.z) && accel.y < -0.2f)
+        else if (Mathf.Abs(accel.y) < Mathf.Abs(accel.z) && accel.y < -0f)
         {
             SetDirection(4);
         }
 
-        else if(Mathf.Abs(accel.y) < 0.2f && Mathf.Abs(accel.z)< 0.2f)
+        else if(Mathf.Abs(accel.y) < 0.02f && Mathf.Abs(accel.z)< 0f)
         {
             SetDirection(0);
         }
