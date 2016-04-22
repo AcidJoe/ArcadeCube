@@ -35,32 +35,35 @@ public class Snake : MonoBehaviour
 
     void Update()
     {
-        if (controller.GetDirection() != 0 && !isChoosen)
+        if (controller != null)
         {
-            if (currentState == State.up || currentState == State.down)
+            if (controller.GetDirection() != 0 && !isChoosen)
             {
-                if (controller.GetDirection() == 4)
+                if (currentState == State.up || currentState == State.down)
                 {
-                    setState(State.left);
-                    isChoosen = true;
+                    if (controller.GetDirection() == 4)
+                    {
+                        setState(State.left);
+                        isChoosen = true;
+                    }
+                    else if (controller.GetDirection() == 6)
+                    {
+                        setState(State.right);
+                        isChoosen = true;
+                    }
                 }
-                else if (controller.GetDirection() == 6)
+                else if (currentState == State.left || currentState == State.right)
                 {
-                    setState(State.right);
-                    isChoosen = true;
-                }
-            }
-            else if (currentState == State.left || currentState == State.right)
-            {
-                if (controller.GetDirection() == 2)
-                {
-                    setState(State.up);
-                    isChoosen = true;
-                }
-                else if (controller.GetDirection() == 8)
-                {
-                    setState(State.down);
-                    isChoosen = true;
+                    if (controller.GetDirection() == 2)
+                    {
+                        setState(State.up);
+                        isChoosen = true;
+                    }
+                    else if (controller.GetDirection() == 8)
+                    {
+                        setState(State.down);
+                        isChoosen = true;
+                    }
                 }
             }
         }
