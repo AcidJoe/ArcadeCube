@@ -333,11 +333,11 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   metroPackageName: Arcade Cube
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: D:\Development\Unity Projects\Arcade Cube\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Acid Joe
+  metroCertificateIssuer: Acid Joe
+  metroCertificateNotAfter: 00737fb42cbcd201
   metroApplicationDescription: Arcade Cube
   wsaImages: {}
   metroTileShortName: 

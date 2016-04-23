@@ -756,9 +756,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snake: {fileID: 1659281303}
-  buttons: {fileID: 0}
-  swipe: {fileID: 0}
-  accel: {fileID: 0}
+  buttons: {fileID: 167990450}
+  swipe: {fileID: 167990449}
+  accel: {fileID: 167990451}
 --- !u!114 &167990449
 MonoBehaviour:
   m_ObjectHideFlags: 0
